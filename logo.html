@@ -5,6 +5,30 @@
   <title>CodePen - SVG Text</title>
   <link href="assets/css/main.css" rel="stylesheet">
 
+  <style>
+    svg text {
+      font-family: Lora;
+      /* font-family: var(--font-logo); */
+      letter-spacing: 10px;
+      stroke: var(--color-primary);
+      font-size: 150px;
+      font-weight: 700;
+      stroke-width: 3;
+      animation: logoAnimate 5s infinite alternate;
+    }
+    @keyframes logoAnimate {
+      0% {
+        stroke-dasharray: 0 50%;
+        stroke-dashoffset:  20%;
+        fill:hsl(189, 68%, 75%)
+      }
+      100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffstet: -20%;
+        fill: hsla(189, 68%, 75%,0%)
+      }
+    }
+  </style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
