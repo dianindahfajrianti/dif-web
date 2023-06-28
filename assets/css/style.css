@@ -1,9 +1,25 @@
-/**
-* Template Name: Gp - v4.7.0
-* Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/* Fonts */
+@font-face {
+  font-family: 'Logo';
+  src: url("../fonts/Angella White.otf") format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --font-logo: 'Logo', sans serif;
+  --font-default: Open Sans, system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-primary: Roboto, sans-serif;
+  --font-secondary: Work Sans, sans-serif;
+}
+
+/* Colors */
+:root {
+  --color-default: #364d59;
+  --color-primary: #00A3FF;
+  --color-secondary: #52565e;
+}
+
 
 /*--------------------------------------------------------------
 # General
@@ -14,7 +30,7 @@ body {
 }
 
 a {
-  color: #ffc451;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
@@ -37,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #ffc451;
+  background: var(--color-primary);
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -52,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #151515;
 }
 .back-to-top:hover i {
-  color: #ffc451;
+  color: var(--color-primary);
 }
 .back-to-top.active {
   visibility: visible;
@@ -78,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
   position: fixed;
   top: calc(50% - 0px);
   left: calc(50% - 30px);
-  border: 6px solid #ffc451;
+  border: 6px solid var(--color-primary);
   border-top-color: #151515;
   border-bottom-color: #151515;
   border-radius: 50%;
@@ -125,19 +141,21 @@ h1, h2, h3, h4, h5, h6 {
   background: rgba(0, 0, 0, 0.8);
 }
 #header .logo {
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: 700;
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 10px;
   text-transform: uppercase;
 }
 #header .logo a {
   color: #fff;
+  font-family: var(--font-logo);
 }
 #header .logo a span {
-  color: #ffc451;
+  color: var(--color-primary);
+  font-family: var(--font-primary);
 }
 #header .logo img {
   max-height: 40px;
@@ -154,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: 0.3s;
   font-size: 14px;
   display: inline-block;
-  border: 2px solid #ffc451;
+  border: 2px solid var(--color-primary);
 }
 .get-started-btn:hover {
   background: #ffbb38;
@@ -203,7 +221,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 5px;
 }
 .navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #ffc451;
+  color: var(--color-primary);
 }
 .navbar .dropdown ul {
   display: block;
@@ -233,7 +251,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 .navbar .dropdown ul a:hover, .navbar .dropdown ul .active:hover, .navbar .dropdown ul li:hover > a {
-  background-color: #ffc451;
+  background-color: var(--color-primary);
 }
 .navbar .dropdown:hover > ul {
   opacity: 1;
@@ -316,7 +334,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
   color: #151515;
-  background-color: #ffc451;
+  background-color: var(--color-primary);
 }
 .navbar-mobile .getstarted, .navbar-mobile .getstarted:focus {
   margin: 15px;
@@ -343,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
 }
 .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
-  background-color: #ffc451;
+  background-color: var(--color-primary);
 }
 .navbar-mobile .dropdown > .dropdown-active {
   display: block;
@@ -382,7 +400,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
 #hero h1 span {
-  color: #ffc451;
+  color: var(--color-primary);
 }
 #hero h2 {
   color: rgba(255, 255, 255, 0.9);
@@ -399,7 +417,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero .icon-box i {
   font-size: 32px;
   line-height: 1;
-  color: #ffc451;
+  color: var(--color-primary);
 }
 #hero .icon-box h3 {
   font-weight: 700;
@@ -414,10 +432,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: ease-in-out 0.3s;
 }
 #hero .icon-box h3 a:hover {
-  color: #ffc451;
+  color: var(--color-primary);
 }
 #hero .icon-box:hover {
-  border-color: #ffc451;
+  border-color: var(--color-primary);
 }
 @media (min-width: 1024px) {
   #hero {
@@ -499,7 +517,7 @@ section {
   font-size: 20px;
   left: 0;
   top: -3px;
-  color: #ffc451;
+  color: var(--color-primary);
 }
 .about .content p:last-child {
   margin-bottom: 0;
@@ -532,7 +550,7 @@ section {
   background-color: #ddd;
 }
 .clients .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffc451;
+  background-color: var(--color-primary);
 }
 
 /*--------------------------------------------------------------
@@ -552,7 +570,7 @@ section {
 .features .icon-box i {
   font-size: 48px;
   float: left;
-  color: #ffc451;
+  color: var(--color-primary);
 }
 .features .icon-box p {
   font-size: 15px;
@@ -580,7 +598,7 @@ section {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #ffc451;
+  background: var(--color-primary);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -603,7 +621,7 @@ section {
   transition: ease-in-out 0.3s;
 }
 .services .icon-box h4 a:hover {
-  color: #ffc451;
+  color: var(--color-primary);
 }
 .services .icon-box p {
   line-height: 24px;
@@ -646,8 +664,8 @@ section {
   color: #fff;
 }
 .cta .cta-btn:hover {
-  background: #ffc451;
-  border-color: #ffc451;
+  background: var(--color-primary);
+  border-color: var(--color-primary);
   color: #151515;
 }
 
@@ -678,7 +696,7 @@ section {
 }
 .portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
   color: #151515;
-  background: #ffc451;
+  background: var(--color-primary);
 }
 .portfolio #portfolio-flters li:last-child {
   margin-right: 0;
@@ -745,7 +763,7 @@ section {
   transition: 0.3s;
 }
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: #ffc451;
+  color: var(--color-primary);
 }
 .portfolio .portfolio-wrap:hover::before {
   opacity: 1;
@@ -775,10 +793,10 @@ section {
   height: 12px;
   background-color: #fff;
   opacity: 1;
-  border: 1px solid #ffc451;
+  border: 1px solid var(--color-primary);
 }
 .portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffc451;
+  background-color: var(--color-primary);
 }
 .portfolio-details .portfolio-info {
   padding: 30px;
@@ -832,7 +850,7 @@ section {
 .counts .content .count-box i {
   display: block;
   font-size: 36px;
-  color: #ffc451;
+  color: var(--color-primary);
   float: left;
 }
 .counts .content .count-box span {
@@ -958,7 +976,7 @@ section {
   opacity: 0.5;
 }
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #ffc451;
+  background-color: var(--color-primary);
   opacity: 1;
 }
 @media (min-width: 1024px) {
@@ -1015,7 +1033,7 @@ section {
 }
 .team .member .social a:hover {
   color: #151515;
-  background: #ffc451;
+  background: var(--color-primary);
 }
 .team .member .social i {
   font-size: 18px;
@@ -1056,7 +1074,7 @@ section {
 }
 .contact .info i {
   font-size: 20px;
-  background: #ffc451;
+  background: var(--color-primary);
   color: #151515;
   float: left;
   width: 44px;
@@ -1134,7 +1152,7 @@ section {
   border-radius: 4px;
 }
 .contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #ffc451;
+  border-color: var(--color-primary);
 }
 .contact .php-email-form input {
   height: 44px;
@@ -1143,7 +1161,7 @@ section {
   padding: 10px 12px;
 }
 .contact .php-email-form button[type=submit] {
-  background: #ffc451;
+  background: var(--color-primary);
   border: 0;
   padding: 10px 24px;
   color: #151515;
@@ -1240,7 +1258,7 @@ section {
   text-transform: uppercase;
 }
 #footer .footer-top .footer-info h3 span {
-  color: #ffc451;
+  color: var(--color-primary);
 }
 #footer .footer-top .footer-info p {
   font-size: 14px;
@@ -1264,7 +1282,7 @@ section {
   transition: 0.3s;
 }
 #footer .footer-top .social-links a:hover {
-  background: #ffc451;
+  background: var(--color-primary);
   color: #151515;
   text-decoration: none;
 }
@@ -1285,7 +1303,7 @@ section {
 }
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #ffc451;
+  color: var(--color-primary);
   font-size: 18px;
   line-height: 1;
 }
@@ -1304,7 +1322,7 @@ section {
   line-height: 1;
 }
 #footer .footer-top .footer-links ul a:hover {
-  color: #ffc451;
+  color: var(--color-primary);
 }
 #footer .footer-top .footer-newsletter form {
   margin-top: 30px;
@@ -1327,7 +1345,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #ffc451;
+  background: var(--color-primary);
   color: #151515;
   transition: 0.3s;
   border-radius: 0 4px 4px 0;
@@ -1344,4 +1362,256 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Theme Toggle
+--------------------------------------------------------------*/
+:root {
+  /** sunny side **/
+  --blue-background: #C2E9F6;
+  --blue-border: #72cce3;
+  --blue-color: #96dcee;
+  --yellow-background: #fffaa8;
+  --yellow-border: #f5eb71;
+  /** dark side **/
+  --indigo-background: #808fc7;
+  --indigo-border: #5d6baa;
+  --indigo-color: #6b7abb;
+  --gray-border: #e8e8ea;
+  --gray-dots: #e8e8ea;
+  /** general **/
+  --white: #fff;
+}
+.theme .background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--blue-background);
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transition: all 250ms ease-in;
+}
+.theme .toggle--checkbox {
+  display: none;
+}
+.theme .toggle--checkbox:checked {
+  /** This will all flip from sun to moon **/
+  /** Change the label color **/
+}
+.theme .toggle--checkbox:checked ~ .background {
+  background: var(--indigo-background);
+}
+.theme .toggle--checkbox:checked + .toggle--label {
+  background: var(--indigo-color);
+  border-color: var(--indigo-border);
+  /** Change the cloud to stars **/
+  /** Change the sun into the moon **/
+  /** Show the dimples on the moon **/
+}
+.theme .toggle--checkbox:checked + .toggle--label .toggle--label-background {
+  /* left: 60px;
+  width: 5px; */
+  left: 30px;
+  width: 2px;
+}
+.theme .toggle--checkbox:checked + .toggle--label .toggle--label-background:before {
+  /* width: 5px;
+  height: 5px;
+  top: -25px; */
+  width: 2px;
+  height: 2px;
+  top: -12px;
+}
+.theme .toggle--checkbox:checked + .toggle--label .toggle--label-background:after {
+  /* width: 5px;
+  height: 5px;
+  left: -30px;
+  top: 20px; */
+  width: 2px;
+  height: 2px;
+  left: -15px;
+  top: 10px;
+}
+.theme .toggle--checkbox:checked + .toggle--label:before {
+  background: var(--white);
+  border-color: var(--gray-border);
+  animation-name: switch;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+}
+.theme .toggle--checkbox:checked + .toggle--label:after {
+  transition-delay: 350ms;
+  opacity: 1;
+}
+.theme .toggle--label {
+  /** Placeholder element, starting at blue **/
+  /* width: 200px;
+  height: 100px; */
+  width: 100px;
+  height: 50px;
+  background: var(--blue-color);
+  border-radius: 100px;
+  border: 5px solid var(--blue-border);
+  display: flex;
+  position: relative;
+  transition: all 350ms ease-in;
+  /** The sun cloud and moon stars **/
+  /** Sun/Moon element **/
+  /** Gray dots on the moon **/
+}
+.theme .toggle--label-background {
+  /* width: 10px;
+  height: 5px;
+  left: 135px;
+  top: 45px; */
+  width: 5px;
+  height: 2px;
+  left: 67px;
+  top: 22px;
+  border-radius: 5px;
+  position: relative;
+  background: var(--white);
+  transition: all 150ms ease-in;
+}
+.theme .toggle--label-background:before {
+  content: "";
+  position: absolute;
+  /* top: -5px;
+  width: 40px;
+  left: -20px;
+  height: 5px; */
+  top: -2px;
+  width: 20px;
+  left: -10px;
+  height: 2px;
+  border-radius: 5px;
+  background: var(--white);
+  transition: all 150ms ease-in;
+}
+.theme .toggle--label-background:after {
+  content: "";
+  position: absolute;
+  /* top: 5px;
+  width: 40px;
+  left: -10px;
+  height: 5px; */
+  top: 2px;
+  width: 20px;
+  left: -5px;
+  height: 2px;
+  border-radius: 5px;
+  background: var(--white);
+  transition: all 150ms ease-in;
+}
+.theme .toggle--label:before {
+  animation-name: reverse;
+  animation-duration: 350ms;
+  animation-fill-mode: forwards;
+  transition: all 350ms ease-in;
+  content: "";
+  /* width: 82px;
+  height: 82px;
+  border: 5px solid var(--yellow-border);
+  top: 4px;
+  left: 4px; */
+  width: 41px;
+  height: 41px;
+  border: 2px solid var(--yellow-border);
+  top: 2px;
+  left: 2px;
+  position: absolute;
+  border-radius: 41px;
+  background: var(--yellow-background);
+}
+.theme .toggle--label:after {
+  transition-delay: 0ms;
+  transition: all 250ms ease-in;
+  position: absolute;
+  content: "";
+  /* box-shadow: var(--gray-dots) -13px 0 0 2px, var(--gray-dots) -24px 14px 0 -2px;
+  left: 143px;
+  top: 23px;
+  width: 10px;
+  height: 10px; */
+  box-shadow: var(--gray-dots) -6px 0 0 2px, var(--gray-dots) -12px 7px 0 -2px;
+  left: 71px;
+  top: 11px;
+  width: 5px;
+  height: 5px;
+  background: transparent;
+  border-radius: 50%;
+  opacity: 0;
+}
+@keyframes switch {
+  0% {
+    /* left: 4px; */
+    left: 2px;
+  }
+  60% {
+    /* left: 4px; */
+    left: 2px;
+    /* width: 112px; */
+    width: 56px;
+  }
+  100% {
+    /* left: 104px;
+    width: 82px; */
+    left: 52px;
+    width: 41px;
+  }
+}
+@keyframes reverse {
+  0% {
+    /* left: 104px;
+    width: 82px; */
+    left: 52px;
+    width: 41px;
+  }
+  60% {
+    /* left: 72px; */
+    left: 36px;
+    /* width: 112px; */
+    width: 56px;
+  }
+  100% {
+    /* left: 4px; */
+    left: 2px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Hover Header
+--------------------------------------------------------------*/
+.navbar a:hover:before {
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: left;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B animation:wave 1s ease-in-out infinite alternate; animation-delay:-0.25s; stroke:%23e0ff00; stroke-width:2; stroke-linecap:square; %7D @keyframes wave%7B to%7B d:path('M 0 40 Q 20 42.5 40 40 Q 60 37.5 80 40'); %7D %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 37.5 40 40 Q 60 42.5 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/80px 80px repeat-x;
+  -webkit-animation: waving 3s linear infinite;
+          animation: waving 3s linear infinite;
+  transform: scaleX(1);
+}
+@-webkit-keyframes waving {
+  to {
+    background-position: 80px 50%, 160px 50%;
+  }
+}
+@keyframes waving {
+  to {
+    background-position: 80px 50%, 160px 50%;
+  }
+}
+.navbar a:before, .navbar .active .navbar .active:focus {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  bottom: -45px;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1);
+  transform-origin: right;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200%25' height='100%25'%3E%3Cdefs%3E%3Cstyle%3E .wave%7B stroke:%23e0ff00; stroke-width:2; stroke-linecap:square; %7D %3C/style%3E%3C/defs%3E%3Cpattern id='wavePattern' x='0' y='0' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Cpath fill='none' class='wave' d='M 0 40 Q 20 40 40 40 Q 60 40 80 40' /%3E%3C/pattern%3E%3Crect x='0' y='0' width='100%25' height='100%25' fill='url(%23wavePattern)'%3E%3C/rect%3E%3C/svg%3E") 0px 50%/80px 80px repeat-x;
 }
